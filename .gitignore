@@ -1,0 +1,26 @@
+node_modules/
+.expo/
+.expo-shared/
+dist/
+web-build/
+*.jks
+*.p8
+*.p12
+*.key
+*.mobileprovision
+*.orig.*
+*.log
+npm-debug.*
+yarn-debug.*
+yarn-error.*
+
+# macOS/Linux
+.DS_Store
+
+# Env / secrets - never commit these
+.env
+.env.*
+!.env.example
+
+# EAS
+.eas-build-local/
