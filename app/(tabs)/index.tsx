@@ -95,4 +95,3 @@ const styles = StyleSheet.create({
   ctaText: { color: colors.onBrandPrimary, fontFamily: fonts.textBold, fontSize: font.lg },
 });
 
-The last three screens (capture.tsx, leads.tsx, lead/[id].tsx, success.tsx) are the longest — reply "next" and I'll paste them to finish the set.

@@ -15,21 +15,46 @@ export default function RootLayout() {
     "Rajdhani-Medium": require("../assets/fonts/Rajdhani-Medium.ttf"),
     "Rajdhani-SemiBold": require("../assets/fonts/Rajdhani-SemiBold.ttf"),
     "Rajdhani-Bold": require("../assets/fonts/Rajdhani-Bold.ttf"),
-    "DMSans-Regular": require("../assets/fonts/DMSans-Regular.ttf"),
-    "DMSans-Medium": require("../assets/fonts/DMSans-Medium.ttf"),
-    "DMSans-Bold": require("../assets/fonts/DMSans-Bold.ttf"),
   });
-  useEffect(() => { if (loaded || error) SplashScreen.hideAsync(); }, [loaded, error]);
-  if (!loaded && !error) return null;
+
+  useEffect(() => {
+    if (loaded || error) {
+      SplashScreen.hideAsync();
+    }
+  }, [loaded, error]);
+
+  if (!loaded && !error) {
+    return null;
+  }
+
   return (
     <GestureHandlerRootView style={{ flex: 1 }}>
       <SafeAreaProvider>
         <StatusBar style="light" />
-        <Stack screenOptions={{ headerShown: false, contentStyle: { backgroundColor: "#0D0E11" } }}>
+        <Stack
+          screenOptions={{
+            headerShown: false,
+            contentStyle: {
+              backgroundColor: "#0D0E11",
+            },
+          }}
+        >
           <Stack.Screen name="(tabs)" />
-          <Stack.Screen name="capture" options={{ presentation: "modal" }} />
-          <Stack.Screen name="success" options={{ presentation: "transparentModal", animation: "fade" }} />
-          <Stack.Screen name="lead/[id]" options={{ presentation: "card" }} />
+          <Stack.Screen
+            name="capture"
+            options={{ presentation: "modal" }}
+          />
+          <Stack.Screen
+            name="success"
+            options={{
+              presentation: "transparentModal",
+              animation: "fade",
+            }}
+          />
+          <Stack.Screen
+            name="lead/[id]"
+            options={{ presentation: "card" }}
+          />
         </Stack>
       </SafeAreaProvider>
     </GestureHandlerRootView>
